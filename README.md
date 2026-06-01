@@ -82,7 +82,7 @@ npx mocha [testfile] --timeout 60000
 🚀 Push to GitHub	git push origin feature/login-tests	Upload your branch
 🔍 Open a Pull Request	on GitHub	Ask for review/merge into main
 
-GITHUB 
+========================== GIT HUB SETUP ===============================
 git init - install github
 git remote add origin [githublink]  - add the remote github
 git remote -v - check github version 
@@ -92,12 +92,7 @@ git add samplefile.js - add the specific file to commit
 git commit -m "sample" - remarks for file to commit 
 git push origin main - oush changes to main 
 
-
-git pull --rebase origin main - pull main to local 
-git pull origin main - pull from remote to local
-git stash - temporary hide unsave changes
-
-----conflict push / rejected----
+========================== CONFLICT FIX ===============================
 # Pull the remote code and pause at conflict zones
 git pull --rebase origin main
 
@@ -106,7 +101,7 @@ git add README.md
 git rebase --continue
 
 
-----temporary saving changes----
+========================== TEMPORARY SAVE CHANGES ===============================
 # Save your current work (the -u flag captures new untracked files too)
 git stash -u
 
@@ -118,9 +113,6 @@ git stash list
 
 # Restore your saved work and automatically remove it from the stash drawer
 git stash pop
-
-
-
 
 ========================== BEFORE ASYNC FUNCTION ===============================
        driver = await remote({
