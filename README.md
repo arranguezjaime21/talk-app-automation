@@ -101,11 +101,7 @@ git add README.md
 git rebase --continue
 
 
-<<<<<<< HEAD
 ========================== TEMPORARY SAVE CHANGES ===============================
-=======
-----temporary save changes from local----
->>>>>>> 1920c2b (update readme doc)
 # Save your current work (the -u flag captures new untracked files too)
 git stash -u
 
