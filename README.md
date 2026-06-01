@@ -97,6 +97,30 @@ git pull --rebase origin main - pull main to local
 git pull origin main - pull from remote to local
 git stash - temporary hide unsave changes
 
+----conflict push / rejected----
+# Pull the remote code and pause at conflict zones
+git pull --rebase origin main
+
+# (After manually removing visual markers <<<<<<< ======= >>>>>>> in code editor)
+git add README.md
+git rebase --continue
+
+
+----temporary saving changes----
+# Save your current work (the -u flag captures new untracked files too)
+git stash -u
+
+# Save with a custom reminder name
+git stash save "wip: working on waitAndFindAll optimization"
+
+# See what's inside your stash list
+git stash list
+
+# Restore your saved work and automatically remove it from the stash drawer
+git stash pop
+
+
+
 
 ========================== BEFORE ASYNC FUNCTION ===============================
        driver = await remote({
@@ -106,6 +130,10 @@ git stash - temporary hide unsave changes
       logLevel: "error",
       capabilities: emulatorCapsReset,
 ========================== BEFORE ASYNC FUNCTION ===============================
+
+
+
+
 
 
 
