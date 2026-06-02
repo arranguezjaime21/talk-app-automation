@@ -48,7 +48,7 @@ export const TemplateSelectors = {
     successModal: 'id=com.fdc_machetalk_broadcaster:id/message',
     confirmBtn: 'id=com.fdc_machetalk_broadcaster:id/confirmButton',
 
-    //camera icon
+    // -- camera icon --
     btnIDCam: 'id=com.fdc_machetalk_broadcaster:id/rl_template_image',
     // -- video icon --
     btnIDVideo: "id=com.fdc_machetalk_broadcaster:id/rl_template_video",

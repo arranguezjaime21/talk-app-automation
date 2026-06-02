@@ -1,5 +1,5 @@
 import { remote } from "webdriverio";
-import { emulatorCapsReset } from "../helpers/capabilities";
+import { emulatorCapsReset } from "../helpers/capabilities.js";
 
 export const mochaHooks = { 
     async beforeAll() {
