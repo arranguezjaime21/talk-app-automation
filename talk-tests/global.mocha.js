@@ -1,5 +1,6 @@
 import { remote } from "webdriverio";
 import { emulatorCaps } from "../helpers/capabilities.js";
+import { TemplateSettings } from "../talk-screens/mypage/templatesettings.main.js";
 
 export const mochaHooks = { 
     async beforeAll() {
@@ -12,6 +13,8 @@ export const mochaHooks = {
             logLevel: "error",
             capabilities: emulatorCaps
         });
+
+        global.templateSettings = new TemplateSettings(global.driver);
     },
 
     async afterAll() {
