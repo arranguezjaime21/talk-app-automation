@@ -83,6 +83,8 @@ export class TemplateSettings extends BasePage {
         }
         await this.waitAndClick(this.selectors.saveTemplate);
 
+        await this.driver.pause(2000);
+
         if(await this.elementExists(this.selectors.successModal, 5000)) { 
             await this.waitAndClick(this.selectors.confirmBtn);
         }

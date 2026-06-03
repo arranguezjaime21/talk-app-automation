@@ -7,7 +7,7 @@ describe("Template Settings", function() {
         await templateSettings.navMyPageTemplate();
         await templateSettings.createTemplate({ 
             content: FakeData.randomSentence(),
-            templateType: "text",
+            templateType: "gallery",
         })
     });
 })

@@ -29,7 +29,7 @@ export class CameraHelper {
         await this.waitAndClick(selector.btnIDCam);
         await this.waitAndClick(selector.btnGallery);
 
-        const galleryPermission = await this.elementExists(selector.libraryDialog);
+        const galleryPermission = await this.elementExists(selector.libraryDialog, 5000);
         if(galleryPermission) { 
             console.log("Allowing app permission for device gallery...");
 
