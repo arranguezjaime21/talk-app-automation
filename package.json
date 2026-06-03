@@ -1,15 +1,17 @@
 {
   "name": "talk-automation-liver",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:myPageTemplate": "npx mocha --require talk-tests/global.mocha.js talk-tests/mypage/templatesettings.test.js --timeout 90000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
     "chai": "^6.2.2",
     "mocha": "^11.7.6",
     "webdriverio": "^9.27.2"
