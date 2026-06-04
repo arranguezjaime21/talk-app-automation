@@ -22,7 +22,7 @@ setup new project from scratch [via terminal] installation and dependencies
 create folder > mkdir [project name]
 open created folder > cd [project name]
 initialize NPM - npm init -y
-web driver io - npm instal webdriverio appium --save-dev
+web driver io - npm install webdriverio appium --save-dev
 mocha framewrok - npm install mocha chai --save-dev
 appium - appium driver install uiautomator2
 
