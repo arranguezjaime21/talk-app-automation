@@ -43,14 +43,17 @@ export class CameraHelper {
             }
         }
 
-        await this.waitAndClick(selector.deviceFile);
-        const picture = await this.waitAndFindAll(selector.galleryItems, 5000);
+      
+        const picture = await this.waitAndFindAll(selector.galleryItems, 5000).catch(() => []);
 
         if(picture.length > 0) { 
             const randomIndex = Math.floor(Math.random() * picture.length);
             console.log(`Images are displayed, selecting random index: ${randomIndex}`);
 
             await picture[randomIndex].click();
+            await this.waitAndClick(selector.choosePhoto);
+            await this.driver.pause(1500);
+            await this.elementExists(selector.btnUpload, 10000);
         } else {
             throw new Error(`No image found or displayed in selected gallery folder ${selector.galleryItems}`);
         }

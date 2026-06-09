@@ -60,12 +60,9 @@ export const TemplateSelectors = {
     btnUpload: 'id=com.fdc_machetalk_broadcaster:id/tv_use_photo',
 
      // -- gallery --
-     btnGallery: 'id=com.fdc_machetalk_broadcaster:id/tv_gallery',
-     //>>>> custom locator <<<<<
-     deviceFile: '//*[@resource-id="com.google.android.apps.photos:id/title" and @text="Download"]',
-     deviceGallery: 'id=com.google.android.apps.photos:id/recycler_view',
-     galleryItems: '//android.support.v7.widget.RecyclerView/android.widget.ImageView',
-
+    btnGallery: 'id=com.fdc_machetalk_broadcaster:id/tv_gallery',
+    galleryItems: 'android=new UiSelector().descriptionMatches("^Photo taken.*")',
+    choosePhoto: '//android.widget.TextView[@text="Done"]',
 
      
     // -- close/ cancel button -- 
