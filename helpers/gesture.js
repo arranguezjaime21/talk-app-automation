@@ -88,4 +88,30 @@ export class Gestures {
             speed: 800
         });
     } 
+
+    async swipeToMoveLeft() {
+        const { width , height } = await this.driver.getWindowRect();
+        const centerY = Math.floor(height / 2);
+
+        await this.driver.execute('mobile:dragGesture', {
+            startX: Math.floor(width * 0.85),
+            startY: centerY, 
+            endX: Math.floor(width * 0.15),
+            endY: centerY, 
+            speed: 800
+        });
+    }
+
+    async swipeToMoveRight() {
+        const { width, height } = await this.driver.getWindowRect();
+        const centerY = Math.floor(height / 2);
+
+        await this.driver.execute('mobile:dragGesture', {
+            startX: Math.floor(width * 0.15),
+            startY: centerY,
+            endX: Math.floor(width * 0.85),
+            endY: centerY, 
+            speed: 800
+        });
+    }
 }
